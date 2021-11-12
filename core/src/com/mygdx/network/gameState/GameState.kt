@@ -8,11 +8,8 @@ import org.nd4j.linalg.factory.Nd4j
  * Created by vyacheslav.mischeryakov
  * Created 04.11.2021
  */
-class GameState(inputs: DoubleArray) : Encodable {
+class GameState(private val inputs: DoubleArray) : Encodable {
 
-
-
-    private val inputs: DoubleArray
 
     override fun toArray(): DoubleArray {
         return inputs
@@ -38,7 +35,4 @@ class GameState(inputs: DoubleArray) : Encodable {
         return null
     }
 
-    init {
-        this.inputs = inputs
-    }
 }
